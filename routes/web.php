@@ -14,5 +14,5 @@ Route::get('/', function () {
 Route::resource('students', StudentController::class);
 use App\Http\Controllers\UserController;
 
-Route::get('/vote', [UserController::class, 'showForm'])->name('vote.form');
-Route::post('/vote', [UserController::class, 'submitForm'])->name('vote.submit');
+Route::get('vote', [UserController::class, 'showForm'])->name('vote.form');
+Route::post('vote', [UserController::class, 'submitForm'])->name('vote.submit');

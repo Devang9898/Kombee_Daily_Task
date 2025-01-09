@@ -22,4 +22,8 @@ class TouristFactory extends Factory
             'preferences' => implode(',', $this->faker->randomElements(['beaches', 'mountains', 'cities', 'adventures'], 2)),
         ];
     }
+    public function run() 
+    { 
+        Student::factory()->count(10)->create(); 
+    }
 }

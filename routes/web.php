@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 //use App\Models\Employee;
 use App\Models\Faculty;
 use App\Http\Controllers\FacultyController;
+use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -47,3 +48,4 @@ Route::middleware(['auth.admin'])->group(function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 });
+Route::get('/books', [BookController::class, 'index']);
